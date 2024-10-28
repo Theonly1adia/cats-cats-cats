@@ -11,7 +11,7 @@ export default function Cat() {
    
 
    useEffect(() => {
-    fetch('https://cats-cats-cats-demo.deno.dev/cats/abyssinian')
+    fetch('https://cats-cats-cats-demo.deno.dev/cats/birman')
         .then(response =>  response.json())
         .then(data => {
             setCat (data);
