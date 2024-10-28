@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Header from "./CatHeader";
 import CatImage from "./CatImage";
 import CatDetails from "./CatDetails";
 import CatHeader from "./CatHeader";
+/* import { Link } from "react-router-dom"; */
 
 
 
@@ -27,10 +27,17 @@ export default function Cat() {
     return (
         <div className="bg-blue-200 min-h-screen">
             <CatHeader/>
-        <div className="my-6">
-            <CatImage catData={catData}/>
-        </div>
+            <div className="my-6">
+                <CatImage catData={catData}/>
+            </div>
             <CatDetails catData={catData}/>
+            {/* <div className="text-center mt-6">
+                <Link to="/MoreCats" className="text-blue-500 underline text-lg hover:text-blue-700">
+                    See More Cats
+                </Link>
+            </div> */}
         </div>
+
+        
     );
 }
