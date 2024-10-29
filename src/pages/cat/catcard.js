@@ -1,11 +1,11 @@
 import React from 'react';
+import CatDetails from './CatDetails';
 
-export default function CatCard ({image, name, description}) {
+export default function CatCard ({ cat }) {
     return (
         <div className='p-4 bg-white rounded-lg shadow-md'>
-            <img src= {image} alt={name} className='w-full h-48 object-cover rounded-md'/>
-            <h2 className='mt-4 text-xl font-semibold'>{name}</h2>
-            <p className='mt-2 text-grey-600'>{description}</p>
+            <img src= {cat.image_link} alt={cat.name} className='w-full h-48 object-cover rounded-md'/>
+            <CatDetails name={cat.name} description={cat.description}/>
         </div>
     );
 }

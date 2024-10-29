@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from "react";
+import CatCard from "./CatCard";
 import CatHeader from "./CatHeader";
 
 export default function MoreCats() {
-    const [cats, SetCats] = useState([]);
+    const [cats, setCats] = useState([]);
 
     useEffect(() => {
         fetch("https://cats-cats-cats-demo.deno.dev/cats/bur?multi_cat=true")
-        .then(response => response.json())
-        .then(data => SetCats(data))
-        .catch(error => console.error("Error fetching multiple cats data:", error));
+        .then((response) => response.json())
+        .then((data) => setCats(data))
+        .catch((error) => console.error("Error fetching multiple cats data:", error));
     }, []);
 
     if (cats.length === 0) {
         return <p>Loading...</p>;
     }
 
-    return (
+
+        return (
+            <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"> 
+                {cats.map((cat,index)=>(
+                    <CatCard key={index} cat={cat}/>
+                    
+                )
+            )}
+            </div>
+        );
+    /* return (
         <div className="bg-blue-50 min-h-screen p-8">
             <h1 className="text-3xl font-bold text-center mb-8">Meet More Cats</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -28,5 +39,5 @@ export default function MoreCats() {
                 ))}
             </div>
         </div>
-    );
+    ); */
 }
