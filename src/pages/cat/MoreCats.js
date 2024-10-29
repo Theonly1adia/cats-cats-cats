@@ -11,7 +11,7 @@ export default function MoreCats() {
         .catch(error => console.error("Error fetching multiple cats data:", error));
     }, []);
 
-    if (cats,length === 0) {
+    if (cats.length === 0) {
         return <p>Loading...</p>;
     }
 

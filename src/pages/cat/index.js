@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CatImage from "./CatImage";
 import CatDetails from "./CatDetails";
 import CatHeader from "./CatHeader";
-/* import { Link } from "react-router-dom"; */
+import Link from "next/link";
 
 
 
@@ -31,11 +31,11 @@ export default function Cat() {
                 <CatImage catData={catData}/>
             </div>
             <CatDetails catData={catData}/>
-            {/* <div className="text-center mt-6">
-                <Link to="/MoreCats" className="text-blue-500 underline text-lg hover:text-blue-700">
+            <div className="text-center mt-6">
+                <Link href="/cat/MoreCats" className="text-blue-500 underline text-lg hover:text-blue-700">
                     See More Cats
                 </Link>
-            </div> */}
+            </div>
         </div>
 
         
