@@ -14,6 +14,6 @@
   "max_weight": 10,
   "min_life_expectancy": 9,
   "max_life_expectancy": 15,
-  "breed": "Abyssinian"
+  "name": "Abyssinian"
 }
 
