@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 export default function Cat() {
-   const [catData, setCat] = useState (null);
+   const [catData, setCat] = useState ({});
    
 
    useEffect(() => {
